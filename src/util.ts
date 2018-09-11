@@ -30,7 +30,7 @@ export function merge(...literals: {[prop: string]: any}[]): {[prop: string]: an
 }
 
 export function are_in_browser(): boolean {
-  return process.platform === 'browser';
+  return typeof window !== "undefined";
 }
 
 export var typedArraysSupported: boolean = typeof ArrayBuffer !== "undefined";
