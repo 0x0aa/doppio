@@ -754,8 +754,8 @@ export default function (): any {
       // TODO: Need to check specific flags
       const pathString = getStringFromHeap(thread, pathAddress);
       // TODO: fs.access() is better but not currently supported in browserfs: https://github.com/jvilk/BrowserFS/issues/128
-      const checker = util.are_in_browser() ? fs.stat : fs.access;
-      checker(pathString, (err, stat) => {
+      const checker: (path: string, callback?: (err: NodeJS.ErrnoException) => any) => void = util.are_in_browser() ? fs.stat : fs.access;
+      checker(pathString, (err) => {
         if (err) {
           throwNodeError(thread, err);
         } else {
