@@ -29,7 +29,7 @@
     "@types/grunt": "^0.4.20",
     "@types/jasmine": "^2.5.35",
     "@types/karma": "^1.7.0",
-    "@types/node": "6.0.33",
+    "@types/node": "^6.0.33",
     "@types/rimraf": "0.0.28",
     "@types/semver": "^5.3.30",
     "@types/serve-static": "^1.7.31",
